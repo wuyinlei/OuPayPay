@@ -29,7 +29,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import opay.com.oupaypay.app.OPayApplication;
+import opay.com.oupaypay.app.opay.OPayApplication;
 
 /**
  * Created by apefu on 16/7/18

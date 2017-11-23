@@ -1,22 +1,15 @@
-package opay.com.oupaypay.app;
+package opay.com.oupaypay.app.opay;
 
 
 import android.app.Activity;
 import android.os.Handler;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 
 import com.blankj.utilcode.util.Utils;
-import com.joanzapata.iconify.IconFontDescriptor;
-import com.joanzapata.iconify.Iconify;
-import com.ruolan.cainiao_core.delegate.web.event.Event;
-import com.ruolan.cainiao_core.delegate.web.event.EventManager;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.WeakHashMap;
 
-import butterknife.OnClick;
 import okhttp3.Interceptor;
 
 /**
@@ -32,9 +25,6 @@ public class Configurator {
     private static final Handler HANDLER = new Handler();
 
     private static final ArrayList<Interceptor> CAINIAO_INTERCEPTORS = new ArrayList<>();
-
-
-    private static final ArrayList<IconFontDescriptor> ICON_FONT_DESCRIPTORS = new ArrayList<>();
 
 
     public Configurator() {
@@ -56,9 +46,8 @@ public class Configurator {
     }
 
     public final void configure() {
-        initIcons();
         CAINIAO_CONFIGS.put(ConfigType.CONFIG_READY.name(), true);
-        Utils.init(Cainiao.getApplicationContext());
+        Utils.init(OPay.getApplicationContext());
     }
 
     public static Configurator getInstance() {
@@ -76,16 +65,6 @@ public class Configurator {
         return this;
     }
 
-    /**
-     * 传入自定义的Icon
-     *
-     * @param descriptor IconFontDescriptor
-     * @return Configurator
-     */
-    public final Configurator withIcon(IconFontDescriptor descriptor) {
-        ICON_FONT_DESCRIPTORS.add(descriptor);
-        return this;
-    }
 
     /**
      * 添加自定义的拦截器
@@ -115,12 +94,6 @@ public class Configurator {
         return this;
     }
 
-    public Configurator withWebEvent(@Nullable String name, @Nullable Event event) {
-        final EventManager manager = EventManager.getInstance();
-        manager.addEvent(name, event);
-//        CAINIAO_CONFIGS.put(ConfigType.JAVASCRIPT_INTERFACE.name(), name);
-        return this;
-    }
 
 
     /**
@@ -165,15 +138,6 @@ public class Configurator {
         return this;
     }
 
-
-    private void initIcons() {
-        if (ICON_FONT_DESCRIPTORS.size() > 0) {
-            final Iconify.IconifyInitializer initializer = Iconify.with(ICON_FONT_DESCRIPTORS.get(0));
-            for (int i = 1; i < ICON_FONT_DESCRIPTORS.size(); i++) {
-                initializer.with(ICON_FONT_DESCRIPTORS.get(i));
-            }
-        }
-    }
 
     /**
      * 检查配置项是否正确

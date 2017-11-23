@@ -1,4 +1,4 @@
-package opay.com.oupaypay.activity;
+package opay.com.oupaypay.ui.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

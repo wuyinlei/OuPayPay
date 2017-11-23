@@ -5,7 +5,7 @@ import java.util.WeakHashMap;
 /**
  * Created by ruolanmingyue on 2017/11/8.
  *
- * @function
+ * @function 全局的callback   用于全局的回调  例如设置的开关   二维码的扫描回调   头像的设置回调
  */
 
 public class CallbackManager {

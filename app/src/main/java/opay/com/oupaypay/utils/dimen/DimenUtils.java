@@ -4,7 +4,7 @@ import android.content.res.Resources;
 import android.util.DisplayMetrics;
 
 
-import opay.com.oupaypay.app.OPayApplication;
+import opay.com.oupaypay.app.opay.OPayApplication;
 
 /**
  * Created by wuyinlei on 2017/10/15.

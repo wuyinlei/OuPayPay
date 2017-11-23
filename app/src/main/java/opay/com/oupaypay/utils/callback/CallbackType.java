@@ -7,8 +7,10 @@ package opay.com.oupaypay.utils.callback;
  */
 
 public enum CallbackType {
-    ON_CROP,
-    TAG_OPEN_PUSH,
-    TAG_STOP_PUSH,
-    ON_SCAN
+    ON_CROP,  //裁剪
+    TAG_OPEN_PUSH,  //推送打开
+    TAG_STOP_PUSH, //推送关闭
+    ON_SCAN , //扫描
+    AL_PAY_FAIL,
+    AL_PAY_SUCCESS
 }

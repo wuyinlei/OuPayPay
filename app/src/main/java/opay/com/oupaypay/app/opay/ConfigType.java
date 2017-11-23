@@ -1,4 +1,4 @@
-package opay.com.oupaypay.app;
+package opay.com.oupaypay.app.opay;
 
 /**
  * Created by wuyinlei on 2017/7/10.
@@ -17,6 +17,7 @@ public enum  ConfigType {
     ACTIVITY,
     HANDLER,
     JAVASCRIPT_INTERFACE,
+    LOADER_DELAYED,
     WEB_HOST
 
 }

@@ -1,7 +1,6 @@
-package opay.com.oupaypay.app;
+package opay.com.oupaypay.app.opay;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.os.Handler;
 
 import java.util.HashMap;
@@ -12,7 +11,7 @@ import java.util.HashMap;
  * @function
  */
 
-public final class Cainiao {
+public final class OPay {
 
 
     public static Configurator init(Context context) {
