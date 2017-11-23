@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">OuPayPay</string>
     <string name="title_activity_base">BaseActivity</string>
+
+    <!--主页tab按键名字-->
+    <string name="title_home">主页</string>
+    <string name="title_mine">我的</string>
+    <string name="title_bank">账户</string>
+    <string name="title_friend">朋友</string>
+
 </resources>
