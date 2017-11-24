@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.yalantis.ucrop.UCrop;
 
+import opay.com.oupaypay.constant.Constants;
 import opay.com.oupaypay.utils.callback.CallbackManager;
 import opay.com.oupaypay.utils.callback.CallbackType;
 import opay.com.oupaypay.utils.callback.IGlobalCallback;
@@ -39,6 +40,7 @@ public abstract class PermissionCheckerActivity extends BaseActivity {
             ((BaseActivity) context).startActivityForResult(intent, RequestCode.SCAN);
         }
 
+//        Constants.home_index
     }
 
     /**
