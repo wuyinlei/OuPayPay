@@ -21,7 +21,6 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-
     <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
@@ -44,6 +43,12 @@
             android:label="@string/title_activity_base"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name=".ui.fragment.mine.profile.ProfileActivity"/>
+        <activity android:name=".ui.fragment.mine.bank.MyBankActivity"/>
+        <activity android:name=".ui.fragment.mine.code.MyCodeActivity"/>
+        <activity android:name=".ui.fragment.mine.collect.MyCollectActivity"/>
+        <activity android:name=".ui.fragment.mine.message.MyMessageActivity"/>
+        <activity android:name=".ui.fragment.mine.service.MyCustomerServiceActivity"/>
     </application>
 
 </manifest>

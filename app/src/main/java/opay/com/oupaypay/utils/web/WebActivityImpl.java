@@ -1,5 +1,6 @@
 package opay.com.oupaypay.utils.web;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -16,14 +17,14 @@ import opay.com.oupaypay.utils.web.route.Router;
 public class WebActivityImpl extends WebActivity {
 
 
-    public static WebActivityImpl create(String url) {
+    public static void create(Context context, String url) {
 
-        Intent intent = new Intent();
-        final Bundle args = new Bundle();
-        args.putString(RouteKeys.URL.name(), url);
-        final WebActivityImpl delegate = new WebActivityImpl();
-
-        return delegate;
+        Intent intent = new Intent(context,WebActivity.class);
+//        args.putString(RouteKeys.URL.name(), url);
+        intent.putExtra(RouteKeys.URL.name(), url);
+//        final WebActivityImpl delegate = new WebActivityImpl();
+        context.startActivity(intent);
+//        return delegate;
     }
 
     @Override

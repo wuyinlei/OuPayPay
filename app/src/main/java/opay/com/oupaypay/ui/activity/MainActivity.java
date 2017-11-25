@@ -1,15 +1,16 @@
 package opay.com.oupaypay.ui.activity;
 
-import android.annotation.SuppressLint;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.view.KeyEvent;
-import android.view.MenuItem;
-import android.view.MotionEvent;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TabHost;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import opay.com.oupaypay.R;
 import opay.com.oupaypay.app.base.BaseActivity;
@@ -17,17 +18,19 @@ import opay.com.oupaypay.ui.fragment.bills.BillsFragment;
 import opay.com.oupaypay.ui.fragment.friend.FriendFragment;
 import opay.com.oupaypay.ui.fragment.home.HomeFragment;
 import opay.com.oupaypay.ui.fragment.mine.MineFragment;
+import opay.com.oupaypay.widget.FragmentTabHost;
 
 
 public class MainActivity extends BaseActivity {
 
-    LinearLayoutCompat mBottomBar = null;
-    public BottomNavigationView mNavigationView;
-
-    public MenuItem mMenuItem;
-
-    public ViewPager mViewPager;
     private long EXIT_FLAG = 0;
+
+    //底部tab
+    private List<Tab> mTabs = new ArrayList<>(4);
+    private FragmentTabHost mTabHost;
+    private ImageView img;  //底部图片
+    private TextView text;  //底部标题
+    private LayoutInflater mInflater;
 
 
     @Override
@@ -40,17 +43,65 @@ public class MainActivity extends BaseActivity {
 
     }
 
+    /**
+     * 初始化底部的几个菜单栏
+     */
+    private void initTab() {
+        Tab home = new Tab(R.string.title_home, R.drawable.ic_dashboard_black_24dp, HomeFragment.class);
+        Tab bills = new Tab(R.string.title_bank, R.drawable.ic_dashboard_black_24dp, BillsFragment.class);
+        Tab friend = new Tab(R.string.title_friend, R.drawable.ic_dashboard_black_24dp, FriendFragment.class);
+        Tab mine = new Tab(R.string.title_mine, R.drawable.ic_dashboard_black_24dp, MineFragment.class);
+
+        mTabs.add(home);
+        mTabs.add(bills);
+        mTabs.add(friend);
+        mTabs.add(mine);
+
+        mInflater = LayoutInflater.from(this);
+        mTabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
+
+        mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
+
+        int i = -1;
+
+        for (Tab tab : mTabs) {
+            TabHost.TabSpec tabSpec = mTabHost.newTabSpec(getString(tab.getTitle()));
+            tabSpec.setIndicator(builderIndiator(tab));
+            mTabHost.addTab(tabSpec, tab.getFragment(), null, ++i);
+        }
+
+        //去掉分割线
+        mTabHost.getTabWidget().setShowDividers(LinearLayout.SHOW_DIVIDER_NONE);
+        //设置初始显示的是第几个tab
+        mTabHost.setCurrentTab(0);
+
+    }
+
+
+    /**
+     * 创建indiator
+     *
+     * @param tab tab
+     * @return view
+     */
+    private View builderIndiator(Tab tab) {
+        View view = mInflater.inflate(R.layout.tab_indicator, null);
+
+        img = (ImageView) view.findViewById(R.id.icon_tab);
+        text = (TextView) view.findViewById(R.id.text_indicator);
+        img.setBackgroundResource(tab.getImage());
+        text.setText(tab.getTitle());
+
+        return view;
+    }
+
+
+
+
+
     @Override
     protected void initView() {
-
-        mNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
-        mViewPager = (ViewPager) findViewById(R.id.view_pager);
-
-        BottomNavigationViewHelper.disableShiftMode(mNavigationView);
-
-        navigationViewSetting(mNavigationView);
-
-        viewPagerSetting(mViewPager);
+        initTab();
 
     }
 
@@ -59,21 +110,6 @@ public class MainActivity extends BaseActivity {
         return R.layout.activity_main;
     }
 
-
-    /**
-     * 设置和ViewPager进行联动
-     *
-     * @param viewPager viewPager
-     */
-    private void setupViewPager(ViewPager viewPager) {
-        BottomViewPagerAdapter adapter = new BottomViewPagerAdapter(getSupportFragmentManager());
-
-        adapter.addFragment(new HomeFragment());
-        adapter.addFragment(new BillsFragment());
-        adapter.addFragment(new FriendFragment());
-        adapter.addFragment(new MineFragment());
-        viewPager.setAdapter(adapter);
-    }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -92,67 +128,4 @@ public class MainActivity extends BaseActivity {
     }
 
 
-    @SuppressLint("ClickableViewAccessibility")
-    private void viewPagerSetting(ViewPager viewPager) {
-
-        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                if (mMenuItem != null) {
-                    mMenuItem.setChecked(false);
-                } else {
-                    mNavigationView.getMenu().getItem(0).setChecked(false);
-                }
-                mMenuItem = mNavigationView.getMenu().getItem(position);
-                mMenuItem.setChecked(true);
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-            }
-        });
-
-        //禁止ViewPager滑动
-        mViewPager.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                return true;
-            }
-        });
-
-
-        setupViewPager(viewPager);
-
-    }
-
-    private void navigationViewSetting(BottomNavigationView navigationView) {
-        navigationView.setOnNavigationItemSelectedListener(
-                new BottomNavigationView.OnNavigationItemSelectedListener() {
-                    @SuppressLint("NewApi")
-                    @Override
-                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                        switch (item.getItemId()) {
-                            case R.id.navigation_home:
-                                mViewPager.setCurrentItem(0);
-                                break;
-                            case R.id.navigation_dashboard:
-                                mViewPager.setCurrentItem(1);
-                                break;
-                            case R.id.navigation_video:
-                                mViewPager.setCurrentItem(2);
-                                break;
-                            case R.id.navigation_cart:
-                                mViewPager.setCurrentItem(3);
-                                break;
-                        }
-                        return false;
-                    }
-                });
-
-    }
 }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/home_title2_colot">
+
+    <ImageView
+        android:id="@+id/toolbar_head2_scan"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/home_scanning"/>
+
+    <ImageView
+        android:id="@+id/toolbar_head2_pay"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/toolbar_head2_scan"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/home_payment"/>
+
+    <ImageView
+        android:id="@+id/toolbar_head2_receive"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/toolbar_head2_pay"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/home_receivables"/>
+
+    <ImageView
+        android:id="@+id/toolbar_head2_add"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:src="@mipmap/currency_addfriend"
+    />
+
+</RelativeLayout>

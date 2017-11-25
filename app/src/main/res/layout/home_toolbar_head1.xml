@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/home_title2_colot"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_marginLeft="15dp"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        android:background="#9b9b9b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/toolbar_head1_serachicon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/home_serach" />
+
+
+        <EditText
+            android:background="@null"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:gravity="center_vertical"
+            android:hint="输入关键字"
+            android:id="@+id/toolbar_head1_serach"
+            android:layout_width="260dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="2dp" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/toolbar_head1_add"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/currency_addfriend" />
+
+    <ImageView
+        android:id="@+id/toolbar_head1_contract"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/toolbar_head1_add"
+        android:src="@mipmap/currency_maillist" />
+
+</RelativeLayout>

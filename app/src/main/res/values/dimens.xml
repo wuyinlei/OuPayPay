@@ -70,7 +70,7 @@
     <dimen name="len_212">212dp</dimen>
     <dimen name="len_224">224dp</dimen>
     <dimen name="len_256">256dp</dimen>
-
+    <dimen name="len_15">15dp</dimen>
 
 
 </resources>

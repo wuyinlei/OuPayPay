@@ -31,8 +31,7 @@ public abstract class WebActivity extends AppCompatActivity implements IWebViewI
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final Bundle args = getIntent().getExtras();
-        mUrl = args.getString(RouteKeys.URL.name());
+        mUrl = getIntent().getStringExtra(RouteKeys.URL.name());
         initWebView();
     }
 
