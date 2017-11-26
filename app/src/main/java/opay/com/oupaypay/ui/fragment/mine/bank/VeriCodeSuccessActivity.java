@@ -1,4 +1,4 @@
-package opay.com.oupaypay.ui.fragment.mine.code;
+package opay.com.oupaypay.ui.fragment.mine.bank;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -8,14 +8,16 @@ import opay.com.oupaypay.R;
 import opay.com.oupaypay.app.base.BaseActivity;
 
 /**
- * Created by wuyinlei on 2017/11/25.
+ * Created by wuyinlei on 2017/11/26.
+ *
+ * @funcition 验证码验证成功
  */
 
-public class MyCodeActivity extends BaseActivity implements View.OnClickListener {
+public class VeriCodeSuccessActivity extends BaseActivity implements View.OnClickListener {
 
-    private ImageView mIvCode;
     private ImageView mIvBack;
     private TextView mTvBack;
+    private TextView mTvSuccess;
 
     @Override
     protected void initData() {
@@ -26,19 +28,19 @@ public class MyCodeActivity extends BaseActivity implements View.OnClickListener
     protected void initListener() {
         mIvBack.setOnClickListener(this);
         mTvBack.setOnClickListener(this);
+        mTvSuccess.setOnClickListener(this);
     }
 
     @Override
     protected void initView() {
-        mIvCode = (ImageView) findViewById(R.id.iv_code);
         mIvBack = (ImageView) findViewById(R.id.iv_back);
-        mTvBack = (TextView) findViewById(R.id.tv_back_title);
+        mIvBack = (ImageView) findViewById(R.id.iv_back);
+        mTvSuccess = (TextView) findViewById(R.id.tv_success);
     }
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_my_code;
-
+        return R.layout.activity_verification_code_success;
     }
 
     @Override
@@ -47,6 +49,15 @@ public class MyCodeActivity extends BaseActivity implements View.OnClickListener
             case R.id.iv_back:
             case R.id.tv_back_title:
 
+                finish();
+
+                break;
+
+            case R.id.tv_success:
+
+                break;
+
+            default:
 
                 break;
 

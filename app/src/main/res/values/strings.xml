@@ -124,5 +124,35 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="tv_account">欧佩账户</string>
+    <string name="profile_name">真实姓名</string>
+    <string name="my_assets">我的资产</string>
+    <string name="opay_code">欧佩扫一扫,加我为好友</string>
+    <string name="title_home_bank">首页</string>
+    <string name="add_my_bank">添加银行卡</string>
+    <string name="binding_bank">请绑定持卡人本人的银行卡</string>
+    <string name="bank_owner">持卡人</string>
+    <string name="bank_code">卡号</string>
+    <string name="input_bank_owner">输入持卡人姓名</string>
+    <string name="input_bank_code">输入卡号</string>
+    <string name="tv_next">下一步</string>
+    <string name="my_assets_all">总资产</string>
+    <string name="assets_my_yuer">余额</string>
+    <string name="assets_my_hong">红包</string>
+    <string name="assets_my_jifen">积分</string>
+    <string name="yesterday_collect">昨日收入</string>
+    <string name="assets_my_zhuanru">转入</string>
+    <string name="assets_my_zhuanchu">转出</string>
+    <string name="verification_phone">验证手机号</string>
+    <string name="phone_verification_code">验证码</string>
+    <string name="get_authentication_code">获取验证码</string>
+    <string name="can_not_get_code">收不到验证码？</string>
+    <string name="success">完成</string>
+    <string name="add_success">添加完成</string>
+    <string name="tv_blance_etailed">明细</string>
+    <string name="money">¥</string>
+    <string name="my_recharge">充值</string>
+    <string name="my_withdrawals">提现</string>
+    <string name="opay_walet">欧佩钱包</string>
 
 </resources>

@@ -49,6 +49,11 @@
         <activity android:name=".ui.fragment.mine.collect.MyCollectActivity"/>
         <activity android:name=".ui.fragment.mine.message.MyMessageActivity"/>
         <activity android:name=".ui.fragment.mine.service.MyCustomerServiceActivity"/>
+        <activity android:name=".ui.fragment.mine.bank.AddBankActivity"/>
+        <activity android:name=".ui.fragment.mine.bank.MyAssetsActivity"/>
+        <activity android:name=".ui.fragment.mine.bank.VerificationPhoneActivity"/>
+        <activity android:name=".ui.fragment.mine.bank.VeriCodeSuccessActivity"/>
+        <activity android:name=".ui.fragment.mine.bank.MyBlanceActivity"/>
     </application>
 
 </manifest>

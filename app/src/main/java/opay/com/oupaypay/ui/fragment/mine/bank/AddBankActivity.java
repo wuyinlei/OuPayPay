@@ -1,19 +1,28 @@
 package opay.com.oupaypay.ui.fragment.mine.bank;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import opay.com.oupaypay.R;
 import opay.com.oupaypay.app.base.BaseActivity;
 
-public class MyBankActivity extends BaseActivity implements View.OnClickListener {
-    private ImageView mIvCode;
+/**
+ * Created by wuyinlei on 2017/11/25.
+ */
+
+public class AddBankActivity extends BaseActivity implements View.OnClickListener {
+
     private ImageView mIvBack;
     private TextView mTvBack;
-    private ImageView mIvAdd;
-    private RecyclerView mRvLayout;
+    private ImageView mIvAddDetail;
+
+    private TextView mTvNext;
+
+    private EditText mEdBankName;
+    private EditText mEdBankCode;
+
 
     @Override
     protected void initData() {
@@ -24,21 +33,23 @@ public class MyBankActivity extends BaseActivity implements View.OnClickListener
     protected void initListener() {
         mIvBack.setOnClickListener(this);
         mTvBack.setOnClickListener(this);
-        mIvAdd.setOnClickListener(this);
+        mIvAddDetail.setOnClickListener(this);
+        mTvNext.setOnClickListener(this);
     }
 
     @Override
     protected void initView() {
-        mIvCode = (ImageView) findViewById(R.id.iv_code);
         mIvBack = (ImageView) findViewById(R.id.iv_back);
-        mTvBack = (TextView) findViewById(R.id.tv_back_title);
-        mIvAdd = (ImageView) findViewById(R.id.iv_add);
+        mIvBack = (ImageView) findViewById(R.id.iv_back);
+        mIvAddDetail = (ImageView) findViewById(R.id.iv_detail);
+        mTvNext = (TextView) findViewById(R.id.tv_next);
+        mEdBankName = (EditText) findViewById(R.id.et_bank_name);
+        mEdBankCode = (EditText) findViewById(R.id.et_bank_code);
     }
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_my_bank;
-
+        return R.layout.activity_add_my_bank;
     }
 
     @Override
@@ -50,7 +61,11 @@ public class MyBankActivity extends BaseActivity implements View.OnClickListener
 
                 break;
 
-            case R.id.iv_add:
+            case R.id.iv_detail:
+
+                break;
+
+            case R.id.tv_next:
 
                 break;
 

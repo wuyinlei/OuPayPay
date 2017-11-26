@@ -5,11 +5,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:background="@color/main_color"
+        android:background="@color/white"
         android:gravity="center_vertical">
 
         <ImageView
@@ -24,8 +23,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_toEndOf="@+id/iv_back"
-            android:text="@string/title_mine"
-            android:textColor="@color/white"/>
+            android:text="@string/title_home_bank"
+            android:textColor="#4A4A4A"/>
 
 
         <TextView
@@ -33,23 +32,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="@string/my_bank"
-            android:textColor="@color/white"/>
+            android:text="@string/add_my_bank"
+            android:textColor="@color/black"/>
 
 
-        <ImageView
-            android:id="@+id/iv_add"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+        <TextView
+            android:id="@+id/tv_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="@dimen/len_12"/>
+            android:layout_marginEnd="@dimen/len_12"
+            android:text="@string/success"
+            android:textColor="#4A90E2"/>
 
     </RelativeLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/len_16"/>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_success"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_22"/>
 
 
 </LinearLayout>
