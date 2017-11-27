@@ -8,6 +8,8 @@ import java.lang.reflect.Field;
 
 /**
  * Created by wuyinlei on 2017/11/23.
+ *
+ * @funcition
  */
 
 public class BottomNavigationViewHelper {
