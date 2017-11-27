@@ -348,7 +348,15 @@
     <color name="common_top_bar_blue">#22292c</color>
     <color name="base_color_text_black">#3e3e39</color>
     <color name="base_color_text_white">#ffffff</color>
+    <!--基础底色灰-->
+    <color name="base_gray">#d8d8d8</color>
+    <!--基础字体灰色 155-->
+    <color name="base_text_gray">#9b9b9b</color>
+    <!--基础线灰 235-->
+    <color name="base_line_gray">#ebebeb</color>
+<!--基础小字体黑色 155-->
 
+    <color name="base_text_74">#4a4a4a</color>
     <color name="home_title1_color">#30384c</color>
     <color name="home_title2_colot">#30384c</color>
     <color name="divider">#ececec</color>

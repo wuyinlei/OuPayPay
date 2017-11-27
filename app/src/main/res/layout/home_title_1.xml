@@ -2,9 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:layout_marginBottom="20dp"
-    android:layout_marginTop="20dp"
+    android:layout_height="wrap_content"
     android:background="@color/home_title2_colot"
    >
 
@@ -32,7 +30,7 @@
                 android:layout_marginTop="6dp"
                 android:text="@string/home_scan"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
         </LinearLayout>
 
@@ -89,7 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="6dp"
                 android:text="@string/home_receive"
                 android:textColor="@color/white"
                 android:textSize="14sp" />
