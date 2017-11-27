@@ -49,5 +49,6 @@ dependencies {
     compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
     //图片展示
     compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'se.emilsjolander:stickylistheaders:2.7.0'
 
 }

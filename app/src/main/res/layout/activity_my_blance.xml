@@ -177,7 +177,7 @@
             android:layout_toEndOf="@+id/tv_opay_walet"
             android:gravity="center"
             android:text="@string/opay_walet"
-            android:textColor="##9B9B9B"
+            android:textColor="#9B9B9B"
             android:textSize="14sp"/>
 
 
