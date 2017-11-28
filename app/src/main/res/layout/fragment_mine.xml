@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
@@ -47,7 +48,7 @@
             android:layout_below="@+id/tv_nickname"
             android:layout_marginTop="@dimen/len_2"
             android:layout_toEndOf="@id/iv_profile"
-            android:textColor="#4A4A4A"
+            android:textColor="@color/base_text_74"
             android:textSize="17sp"
             tools:text="若兰明月"/>
 
@@ -59,8 +60,8 @@
             android:layout_marginEnd="33dp"
             android:layout_marginTop="@dimen/len_2"
             android:text="@string/privite_profile"
-            android:textColor="#4A4A4A"
-            android:textSize="17sp"/>
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
 
         <ImageView
             android:layout_width="25dp"
@@ -95,6 +96,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/len_50"
             android:text="@string/my_bank"
+            android:textColor="@color/black"
             android:textSize="15sp"/>
 
         <ImageView
@@ -125,6 +127,7 @@
             android:src="@color/black"/>
 
         <TextView
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/len_50"
@@ -159,6 +162,7 @@
             android:src="@color/black"/>
 
         <TextView
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/len_50"
@@ -193,6 +197,7 @@
             android:src="@color/black"/>
 
         <TextView
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/len_50"
@@ -228,6 +233,7 @@
             tools:ignore="ContentDescription"/>
 
         <TextView
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/len_50"

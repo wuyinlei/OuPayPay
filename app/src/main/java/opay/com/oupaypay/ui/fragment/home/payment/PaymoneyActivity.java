@@ -1,4 +1,4 @@
-package opay.com.oupaypay.ui.fragment.home.bank;
+package opay.com.oupaypay.ui.fragment.home.payment;
 
 import opay.com.oupaypay.R;
 import opay.com.oupaypay.app.base.BaseActivity;
@@ -6,10 +6,10 @@ import opay.com.oupaypay.app.base.BaseActivity;
 /**
  * Created by wuyinlei on 2017/11/23.
  *
- * @funcition 银行卡界面
+ * @funcition 付款界面
  */
 
-public class BankActivity extends BaseActivity {
+public class PaymoneyActivity extends BaseActivity {
 
     @Override
     protected void initData() {
@@ -28,6 +28,6 @@ public class BankActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_bank;
+        return R.layout.activity_paymoney;
     }
 }

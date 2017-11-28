@@ -49,6 +49,7 @@ public class AddBankActivity extends BaseActivity implements View.OnClickListene
 
     @Override
     protected int getLayoutId() {
+
         return R.layout.activity_add_my_bank;
     }
 

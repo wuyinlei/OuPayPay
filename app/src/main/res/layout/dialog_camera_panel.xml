@@ -5,6 +5,7 @@
                                               android:layout_gravity="center"
                                               android:layout_marginLeft="10dp"
                                               android:layout_marginRight="10dp"
+                                              android:fitsSystemWindows="true"
                                               android:background="@android:color/transparent"
                                               android:orientation="vertical"
                                               android:paddingBottom="10dp">

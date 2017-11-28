@@ -1,5 +1,6 @@
 package opay.com.oupaypay.ui.fragment.home.collect;
 
+import opay.com.oupaypay.R;
 import opay.com.oupaypay.app.base.BaseActivity;
 
 /**
@@ -26,6 +27,6 @@ public class CollectMoneyActivity extends BaseActivity{
 
     @Override
     protected int getLayoutId() {
-        return 0;
+        return R.layout.activity_collect_money;
     }
 }

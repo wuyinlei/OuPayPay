@@ -1,15 +1,13 @@
-package opay.com.oupaypay.ui.fragment.home.payment;
+package opay.com.oupaypay.ui.fragment.friend.redmoney;
 
+import opay.com.oupaypay.R;
 import opay.com.oupaypay.app.base.BaseActivity;
 
 /**
- * Created by wuyinlei on 2017/11/23.
- *
- * @funcition 付款界面
+ * Created by wuyinlei on 2017/11/28.
  */
 
-public class PaymentActivity extends BaseActivity {
-
+public class RedMoneyActivity extends BaseActivity {
     @Override
     protected void initData() {
 
@@ -27,6 +25,6 @@ public class PaymentActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return 0;
+        return R.layout.activity_red_money;
     }
 }

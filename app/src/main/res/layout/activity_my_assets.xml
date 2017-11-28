@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ececec"
+    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <LinearLayout
@@ -21,26 +22,32 @@
 
             <ImageView
                 android:id="@+id/iv_back"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="9dp"
+                android:layout_height="15dp"
+                android:background="@color/black"
+                android:layout_centerVertical="true"
                 android:layout_marginStart="15dp"/>
 
             <TextView
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
                 android:id="@+id/tv_back_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="8dp"
                 android:layout_toEndOf="@+id/iv_back"
                 android:text="@string/title_home_bank"
                 android:textColor="#4A4A4A"/>
 
 
             <TextView
+                android:layout_centerVertical="true"
                 android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:text="@string/my_assets_all"
+                android:textSize="17sp"
                 android:textColor="@color/black"/>
 
         </RelativeLayout>
@@ -154,10 +161,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/len_12"
                     android:text="@string/assets_my_yuer"
+                    android:textSize="15sp"
                     android:textColor="#9B9B9B"/>
 
                 <TextView
                     android:id="@+id/tv_yuer"
+                    android:textSize="15sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/len_12"
@@ -187,6 +196,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/len_12"
                     android:text="@string/assets_my_hong"
+                    android:textSize="15sp"
                     android:textColor="#9B9B9B"/>
 
                 <TextView
@@ -195,6 +205,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/len_12"
                     android:textColor="@color/black"
+                    android:textSize="15sp"
                     tools:text="@string/assets_my_yuer"/>
 
 
@@ -219,6 +230,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/len_12"
                     android:text="@string/assets_my_jifen"
+                    android:textSize="15sp"
                     android:textColor="#9B9B9B"/>
 
 
@@ -228,6 +240,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/len_12"
                     android:textColor="@color/black"
+                    android:textSize="15sp"
                     tools:text="@string/assets_my_yuer"/>
 
             </LinearLayout>
@@ -258,7 +271,7 @@
                 android:gravity="center"
                 android:text="@string/yesterday_collect"
                 android:textColor="@color/black"
-                android:textSize="15dp"/>
+                android:textSize="15sp"/>
 
 
             <TextView

@@ -54,6 +54,8 @@
         <activity android:name=".ui.fragment.mine.bank.VerificationPhoneActivity"/>
         <activity android:name=".ui.fragment.mine.bank.VeriCodeSuccessActivity"/>
         <activity android:name=".ui.fragment.mine.bank.MyBlanceActivity"/>
+        <activity android:name=".ui.fragment.friend.redmoney.RedMoneyActivity"/>
+        <activity android:name=".ui.fragment.friend.frienthome.FriendHomeActivity"/>
     </application>
 
 </manifest>

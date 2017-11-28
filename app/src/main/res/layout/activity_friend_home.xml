@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ececec"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_profile_beijing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@color/colorAccent"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.37"
+                android:background="#000000"/>
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="13dp"/>
+
+            <TextView
+                android:textSize="16sp"
+                android:id="@+id/tv_back_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="13dp"
+                android:layout_toEndOf="@+id/iv_back"
+                android:text="@string/title_home_bank"
+                android:textColor="@color/white"/>
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="@dimen/len_120"
+            android:layout_height="@dimen/len_120"
+            android:layout_gravity="center"
+            android:layout_marginTop="-60dp"/>
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/len_12"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:text="啊啊啊啊五六环"/>
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/len_4"
+            android:textColor="@color/base_text_74"
+            android:textSize="14sp"
+            tools:text="在四环走丢了去不了五环"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/len_40"
+            android:layout_marginTop="@dimen/len_20"
+            android:gravity="center">
+
+
+            <TextView
+                android:id="@+id/tv_transfer"
+                android:layout_width="@dimen/len_156"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_transfer_border"
+                android:contentDescription="@string/transfer"
+                android:gravity="center"
+                android:text="@string/transfer"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_red_envelopes"
+                android:layout_width="@dimen/len_156"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/len_12"
+                android:layout_toRightOf="@+id/tv_transfer"
+                android:background="@drawable/bg_red_envelopes_border"
+                android:contentDescription="@string/red_envelopes"
+                android:gravity="center"
+                android:text="@string/red_envelopes"
+                android:textColor="#30384c"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/len_20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/len_40"
+                android:text="@string/tv_account"
+                android:textColor="@color/base_text_gray"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/len_40"
+                android:text="@string/tv_account"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="1069584784@qq.com"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/font_20"
+            android:layout_marginTop="@dimen/len_20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/len_40"
+                android:text="@string/profile_name"
+                android:textColor="@color/base_text_gray"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/len_40"
+                android:text="@string/tv_account"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="1069584784@qq.com"/>
+
+            <ImageView
+                android:id="@+id/iv_authen"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="@dimen/font_10"
+                android:src="@color/main_color"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/len_12"
+            android:background="#EBEBEB"/>
+
+        <RelativeLayout
+            android:id="@+id/re_my_beizhu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/len_48"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/len_20"
+                android:layout_height="@dimen/len_20"
+                android:layout_marginStart="15dp"
+                android:src="@color/black"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="@string/my_beizhu"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:src="@color/black"
+                tools:text="1"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</ScrollView>

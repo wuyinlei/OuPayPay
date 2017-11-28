@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ececec"
+    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -14,18 +15,22 @@
 
         <ImageView
             android:id="@+id/iv_back"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="15dp"/>
+            android:layout_width="9dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:background="@color/black"/>
 
         <TextView
             android:id="@+id/tv_back_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
             android:layout_toEndOf="@+id/iv_back"
             android:text="@string/title_home_bank"
-            android:textColor="#4A4A4A"/>
+            android:textColor="#4A4A4A"
+            android:textSize="16sp"/>
 
 
         <TextView
@@ -33,8 +38,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:text="@string/add_my_bank"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textSize="17sp"/>
 
 
         <ImageView
@@ -42,7 +49,9 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="@dimen/len_12"/>
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/len_12"
+            android:background="@color/black"/>
 
     </RelativeLayout>
 
@@ -52,7 +61,8 @@
         android:background="#ececec"
         android:paddingLeft="25dp"
         android:paddingTop="19dp"
-        android:text="@string/binding_bank"/>
+        android:text="@string/binding_bank"
+        android:textSize="14sp"/>
 
 
     <RelativeLayout
@@ -66,7 +76,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:text="@string/bank_owner"
-            android:textColor="#4A4A4A"/>
+            android:textColor="#4A4A4A"
+            android:textSize="15sp"/>
 
 
         <EditText
@@ -76,7 +87,9 @@
             android:layout_marginRight="@dimen/len_30"
             android:layout_marginStart="90dp"
             android:background="@null"
-            android:hint="@string/input_bank_owner"/>
+            android:hint="@string/input_bank_owner"
+            android:textColor="@color/base_text_gray"
+            android:textSize="15sp"/>
 
     </RelativeLayout>
 
@@ -97,7 +110,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:text="@string/bank_code"
-            android:textColor="#4A4A4A"/>
+            android:textColor="#4A4A4A"
+            android:textSize="15sp"/>
 
 
         <EditText
@@ -107,7 +121,9 @@
             android:layout_marginEnd="@dimen/len_30"
             android:layout_marginStart="90dp"
             android:background="@null"
-            android:hint="@string/input_bank_code"/>
+            android:hint="@string/input_bank_code"
+            android:textColor="@color/base_text_gray"
+            android:textSize="15sp"/>
     </RelativeLayout>
 
 

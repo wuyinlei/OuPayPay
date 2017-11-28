@@ -77,5 +77,10 @@
     <string name="my_recharge">充值</string>
     <string name="my_withdrawals">提现</string>
     <string name="opay_walet">欧佩钱包</string>
+    <string name="red_envelopes">发红包</string>
+    <string name="transfer">转账</string>
+    <string name="my_beizhu">备注ta的信息</string>
+    <string name="back">关闭</string>
+    <string name="input_phone_code">短信验证码</string>
 
 </resources>

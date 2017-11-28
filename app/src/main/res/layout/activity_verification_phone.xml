@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ececec"
+    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -15,18 +16,22 @@
 
         <ImageView
             android:id="@+id/iv_back"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="15dp"/>
+            android:layout_width="9dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:background="@color/black"/>
 
         <TextView
             android:id="@+id/tv_back_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginStart="15dp"
             android:layout_toEndOf="@+id/iv_back"
             android:text="@string/title_home_bank"
-            android:textColor="#4A4A4A"/>
+            android:textColor="#4A4A4A"
+            android:textSize="15sp"/>
 
 
         <TextView
@@ -34,8 +39,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:text="@string/verification_phone"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textSize="17sp"/>
 
 
         <ImageView
@@ -43,6 +50,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
             android:layout_marginEnd="@dimen/len_12"
             android:visibility="gone"/>
 
@@ -55,6 +63,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="19dp"
         android:lineSpacingExtra="5dp"
+        android:textSize="14sp"
         tools:text="本次操作需要短信确认，
 验证码已发送至手机182****7913"/>
 
@@ -82,8 +91,10 @@
             android:layout_marginStart="19dp"
             android:layout_toEndOf="@+id/tv_veri_code"
             android:background="@null"
+            android:hint="@string/input_phone_code"
             android:inputType="number"
-            android:singleLine="true"/>
+            android:singleLine="true"
+            android:textSize="15sp"/>
 
 
         <TextView
@@ -93,7 +104,8 @@
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="25dp"
             android:text="@string/get_authentication_code"
-            android:textColor="#4A90E2"/>
+            android:textColor="#4A90E2"
+            android:textSize="15sp"/>
 
     </RelativeLayout>
 
@@ -119,6 +131,7 @@
         android:layout_marginTop="15dp"
         android:gravity="center"
         android:paddingBottom="15dp"
-        android:text="@string/can_not_get_code"/>
+        android:text="@string/can_not_get_code"
+        android:textSize="14sp"/>
 
 </LinearLayout>
