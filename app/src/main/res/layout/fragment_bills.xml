@@ -17,8 +17,7 @@
             android:layout_height="match_parent"
             android:divider="#d6d6d6"
             android:scrollbars="none"
-
-            tools:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            tl:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 
         <android.support.design.widget.AppBarLayout

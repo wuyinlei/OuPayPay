@@ -1,10 +1,13 @@
 package opay.com.oupaypay.ui.fragment.bills;
 
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.view.View;
+import android.widget.TextView;
 
 import opay.com.oupaypay.R;
 import opay.com.oupaypay.app.base.BaseFragment;
+import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
 /**
  * Created by wuyinlei on 2017/11/23.
@@ -13,6 +16,12 @@ import opay.com.oupaypay.app.base.BaseFragment;
  */
 
 public class BillsFragment extends BaseFragment {
+    private StickyListHeadersListView billsFragmentListview;
+    private AppBarLayout billsFragmentAppbar;
+    private TextView billsFragmentTitle;
+    private TextView billsFragmentSelect;
+
+
 
     @Override
     protected void initListener() {
@@ -27,8 +36,16 @@ public class BillsFragment extends BaseFragment {
 
     @Override
     protected void onBindView(Bundle savedInstanceState, View rootView) {
+        billsFragmentListview = (StickyListHeadersListView)rootView.findViewById(R.id.bills_fragment_listview);
+        billsFragmentAppbar = (AppBarLayout)rootView.findViewById(R.id.bills_fragment_appbar);
+        billsFragmentTitle = (TextView)rootView.findViewById(R.id.bills_fragment_title);
+        billsFragmentSelect = (TextView)rootView.findViewById(R.id.bills_fragment_select);
 
     }
+
+
+
+
 
     @Override
     public int setLayout() {
