@@ -2,6 +2,12 @@
     <string name="app_name">OuPayPay</string>
     <string name="title_activity_base">BaseActivity</string>
 
+    <!--账单-->
+    <string name="check_month_bills">查看月账单</string>
+    <string name="check_month">本月</string>
+
+
+
     <!--主页tab按键名字-->
     <string name="title_home">主页</string>
     <string name="title_mine">我的</string>
@@ -82,5 +88,16 @@
     <string name="my_beizhu">备注ta的信息</string>
     <string name="back">关闭</string>
     <string name="input_phone_code">短信验证码</string>
+
+    <!--朋友相关发红包-->
+    <string name="send_red_package">发红包</string>
+    <string name="send_red_bills">账单</string>
+    <string name="send_red_done">完成</string>
+    <string name="receive_red">欧佩红包</string>
+    <string name="receive_back">返回</string>
+    <string name="receive_his">查看我的红包记录</string>
+    <string name="receive_his_num">红包编号：</string>
+    <string name="receive_status">接收成功</string>
+    <string name="receive_suc">恭喜发财，万事如意！</string>
 
 </resources>

@@ -354,12 +354,11 @@
     <color name="base_text_gray">#9b9b9b</color>
     <!--基础线灰 235-->
     <color name="base_line_gray">#ebebeb</color>
-<!--基础小字体黑色 155-->
-
+    <!--基础小字体黑色 747474-->
     <color name="base_text_74">#4a4a4a</color>
     <color name="home_title1_color">#30384c</color>
     <color name="home_title2_colot">#30384c</color>
     <color name="divider">#e4e4e4</color>
-
+    <color name="red_done">#30384C</color>
 
 </resources>

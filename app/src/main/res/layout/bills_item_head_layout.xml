@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="41dp"
+    android:background="@color/base_gray"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/bills_item_head_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="21dp"
+        android:text="@string/check_month"
+        android:textColor="@color/base_text_74"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/bills_item_head_monthbills"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/add_my_bank" />
+
+        <ImageView
+            android:layout_width="6dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

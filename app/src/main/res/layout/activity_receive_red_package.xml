@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context="opay.com.oupaypay.ui.fragment.friend.receiveredpackage.ReceiveRedPackageActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/receive_red_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/red_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:id="@+id/second_page_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp" />
+
+                        <TextView
+                            android:id="@+id/receive_red_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/receive_back"
+                            android:textColor="@color/base_text_74"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/receive_red_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center"
+                        android:text="@string/receive_red"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/receive_red_package_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ImageView
+            android:id="@+id/receive_red_package_status_img"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="44dp" />
+
+        <TextView
+            android:id="@+id/receive_red_package_status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/receive_red_package_status_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:lines="1"
+            android:text="name"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/receive_red_package_money_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/receive_red_package_status_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:lines="1"
+            android:singleLine="true"
+            android:text="@string/receive_suc"
+            android:textColor="@color/base_text_74"
+            android:textSize="14sp" />
+
+
+        <LinearLayout
+            android:id="@+id/red_num_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/receive_red_package_money_status"
+            android:layout_marginTop="46dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥"
+                android:textColor="@color/black"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/receive_red_package_money_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.00"
+                android:textColor="@color/black"
+                android:textSize="44sp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/receive_red_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/red_num_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:text="@string/receive_status" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp">
+
+
+        <TextView
+            android:id="@+id/receive_red_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/receive_his"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/receive_red_mun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/receive_red_history"
+            android:layout_centerHorizontal="true"
+            android:lines="1"
+            android:text="@string/receive_his_num"
+            android:textColor="@color/base_text_gray"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
