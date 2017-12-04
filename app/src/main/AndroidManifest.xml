@@ -56,6 +56,7 @@
         <activity android:name=".ui.fragment.mine.bank.MyBlanceActivity"/>
         <activity android:name=".ui.fragment.friend.redmoney.RedMoneyActivity"/>
         <activity android:name=".ui.fragment.friend.frienthome.FriendHomeActivity"/>
+        <activity android:name=".ui.account.login.LoginActivity"/>
     </application>
 
 </manifest>
