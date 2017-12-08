@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">OuPayPay</string>
+    <string name="app_name">欧佩支付</string>
     <string name="title_activity_base">BaseActivity</string>
 
     <!--账单-->
@@ -114,5 +114,17 @@
     <string name="reset_password">重置密码</string>
     <string name="operat_success">操作成功</string>
     <string name="operat_pass_success">您的密码已经重置成功</string>
+    <string name="home">首页</string>
+    <string name="my_blum">相册</string>
+    <string name="pay_money">向商家付钱</string>
+    <string name="pay_tip">该功能用于向商家当面付款</string>
+    <string name="tip_pay_error">如支付失败，请尝试其他支付方式</string>
+    <string name="pay_my_yuer">账户余额</string>
+    <string name="pay_select">切换付款方式</string>
+    <string name="collect_money">收钱</string>
+    <string name="collect_tip">欧佩扫一扫，向我付钱</string>
+    <string name="tv_pay_ma">付款码</string>
+    <string name="tv_pay_sao">扫码付</string>
+    <string name="discount_title">优惠卡券</string>
 
 </resources>

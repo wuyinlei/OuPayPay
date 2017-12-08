@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import opay.com.oupaypay.R;
 import opay.com.oupaypay.app.base.BaseActivity;
+import opay.com.oupaypay.utils.EnterClass;
 
 /**
  * Created by wuyinlei on 2017/11/23.
@@ -76,28 +77,25 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
         switch (v.getId()) {
             case R.id.iv_back:
             case R.id.tv_back_title:
-
+                finish();
 
                 break;
 
             case R.id.iv_profile:
-
+                // TODO: 2017/12/8 更换头像
 
                 break;
 
             case R.id.re_my_bank:
-
-
+                EnterClass.enterMyBankActivity(ProfileActivity.this,"");
                 break;
 
             case R.id.re_my_code:
-
-
+                EnterClass.enterMyCodeActivity(ProfileActivity.this,"");
                 break;
 
             case R.id.re_my_assets:
-
-
+                EnterClass.enterMyAssets(ProfileActivity.this);
                 break;
 
 

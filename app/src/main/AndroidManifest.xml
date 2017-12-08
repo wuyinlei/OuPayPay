@@ -32,16 +32,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".utils.scanner.ScannerActivity">
+
+        </activity>
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".ui.activity.SplashActivity"
-            android:label="@string/title_activity_base"
-            android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".ui.fragment.mine.profile.ProfileActivity"/>
         <activity android:name=".ui.fragment.mine.bank.MyBankActivity"/>
@@ -57,6 +58,14 @@
         <activity android:name=".ui.fragment.friend.redmoney.RedMoneyActivity"/>
         <activity android:name=".ui.fragment.friend.frienthome.FriendHomeActivity"/>
         <activity android:name=".ui.account.login.LoginActivity"/>
+        <activity android:name=".ui.account.register.RegisterActivity"/>
+        <activity android:name=".ui.account.update.uppass.UpdatePassActivity"/>
+        <activity android:name=".ui.account.update.upsupass.UpdatePassSuccActivity"/>
+        <activity android:name=".ui.activity.MainActivity"/>
+        <activity android:name=".ui.fragment.home.payment.PaymoneyActivity"/>
+        <activity android:name=".ui.fragment.home.collect.CollectMoneyActivity"/>
+        <activity android:name=".ui.fragment.home.discount.DiscountSummaryActivity"/>
+
     </application>
 
 </manifest>

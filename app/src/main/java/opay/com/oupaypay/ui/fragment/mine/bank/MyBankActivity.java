@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import opay.com.oupaypay.R;
 import opay.com.oupaypay.app.base.BaseActivity;
+import opay.com.oupaypay.utils.EnterClass;
 
 public class MyBankActivity extends BaseActivity implements View.OnClickListener {
     private ImageView mIvCode;
@@ -46,12 +47,11 @@ public class MyBankActivity extends BaseActivity implements View.OnClickListener
         switch (v.getId()) {
             case R.id.iv_back:
             case R.id.tv_back_title:
-
-
+                finish();
                 break;
 
             case R.id.iv_add:
-
+                EnterClass.enterAddBank(MyBankActivity.this);
                 break;
 
             default:

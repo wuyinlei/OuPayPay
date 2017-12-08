@@ -6,9 +6,12 @@ import android.widget.TextView;
 
 import opay.com.oupaypay.R;
 import opay.com.oupaypay.app.base.BaseActivity;
+import opay.com.oupaypay.utils.tools.RxQRCode;
 
 /**
  * Created by wuyinlei on 2017/11/25.
+ *
+ * @funcition
  */
 
 public class MyCodeActivity extends BaseActivity implements View.OnClickListener {
@@ -19,7 +22,7 @@ public class MyCodeActivity extends BaseActivity implements View.OnClickListener
 
     @Override
     protected void initData() {
-
+        RxQRCode.createQRCode("欧佩支付",mIvCode);
     }
 
     @Override
@@ -46,8 +49,7 @@ public class MyCodeActivity extends BaseActivity implements View.OnClickListener
         switch (v.getId()) {
             case R.id.iv_back:
             case R.id.tv_back_title:
-
-
+                finish();
                 break;
 
         }

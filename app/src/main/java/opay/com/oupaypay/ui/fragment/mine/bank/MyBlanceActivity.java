@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import opay.com.oupaypay.R;
 import opay.com.oupaypay.app.base.BaseActivity;
+import opay.com.oupaypay.utils.EnterClass;
 
 /**
  * Created by wuyinlei on 2017/11/26.
@@ -45,7 +46,7 @@ public class MyBlanceActivity extends BaseActivity implements View.OnClickListen
     @Override
     protected void initView() {
         mIvBack = (ImageView) findViewById(R.id.iv_back);
-        mIvBack = (ImageView) findViewById(R.id.iv_back);
+        mTvBack = (TextView) findViewById(R.id.tv_back_title);
         mTvDetail = (TextView) findViewById(R.id.iv_blance_detailed);
         mTvBlanceNum = (TextView) findViewById(R.id.tv_my_blance);
         mReRecharge = (RelativeLayout) findViewById(R.id.re_my_recharge);
@@ -70,23 +71,24 @@ public class MyBlanceActivity extends BaseActivity implements View.OnClickListen
                 break;
 
             case R.id.iv_blance_detailed:
-
+                EnterClass.enterBlanceDetail(MyBlanceActivity.this);
                 break;
 
             case R.id.re_my_recharge:
-
+                // TODO: 2017/12/8 充值逻辑
                 break;
 
             case R.id.re_my_withdrawals:
-
+                // TODO: 2017/12/8 提现逻辑
                 break;
 
             case R.id.tv_opay_walet:
+// TODO: 2017/12/8 oupay 钱包
 
                 break;
 
             case R.id.tv_common_problem:
-
+                // TODO: 2017/12/8 常见问题
                 break;
 
             default:

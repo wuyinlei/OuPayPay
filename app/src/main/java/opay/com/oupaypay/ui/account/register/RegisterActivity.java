@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import opay.com.oupaypay.R;
 import opay.com.oupaypay.app.base.BaseActivity;
+import opay.com.oupaypay.utils.EnterClass;
 
 /**
  * Created by wuyinlei on 2017/12/4.
@@ -47,6 +48,8 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.tv_login:
+
+                EnterClass.enterLogin(RegisterActivity.this);
 
                 break;
 

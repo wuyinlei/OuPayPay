@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import opay.com.oupaypay.R;
 import opay.com.oupaypay.app.base.BaseActivity;
+import opay.com.oupaypay.utils.EnterClass;
 
 /**
  * Created by wuyinlei on 2017/12/4.
@@ -30,7 +31,8 @@ public class UpdatePassSuccActivity extends BaseActivity {
         mTvLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                EnterClass.enterLogin(UpdatePassSuccActivity.this);
+                finish();
             }
         });
     }

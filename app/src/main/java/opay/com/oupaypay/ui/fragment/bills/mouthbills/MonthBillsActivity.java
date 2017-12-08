@@ -5,6 +5,8 @@ import opay.com.oupaypay.app.base.BaseActivity;
 
 /**
  * Created by wuyinlei on 2017/11/28.
+ *
+ * @funcition 月账单
  */
 
 public class MonthBillsActivity extends BaseActivity {

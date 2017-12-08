@@ -18,6 +18,7 @@ public abstract class BaseInterceptor implements Interceptor {
     /**
      * 获取请求参数
      *
+     *
      * @param chain Chain
      * @return LinkedHashMap
      */
@@ -27,6 +28,7 @@ public abstract class BaseInterceptor implements Interceptor {
         int size = url.querySize();
         final LinkedHashMap<String, String> params = new LinkedHashMap<>();
         for (int i = 0; i < size; i++) {
+
             params.put(url.queryParameterName(i), url.queryParameterValue(i));
         }
         return params;

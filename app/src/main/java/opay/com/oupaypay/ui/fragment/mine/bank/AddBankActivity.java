@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import opay.com.oupaypay.R;
 import opay.com.oupaypay.app.base.BaseActivity;
+import opay.com.oupaypay.utils.EnterClass;
 
 /**
  * Created by wuyinlei on 2017/11/25.
@@ -40,7 +41,7 @@ public class AddBankActivity extends BaseActivity implements View.OnClickListene
     @Override
     protected void initView() {
         mIvBack = (ImageView) findViewById(R.id.iv_back);
-        mIvBack = (ImageView) findViewById(R.id.iv_back);
+        mTvBack = (TextView) findViewById(R.id.tv_back_title);
         mIvAddDetail = (ImageView) findViewById(R.id.iv_detail);
         mTvNext = (TextView) findViewById(R.id.tv_next);
         mEdBankName = (EditText) findViewById(R.id.et_bank_name);
@@ -58,8 +59,7 @@ public class AddBankActivity extends BaseActivity implements View.OnClickListene
         switch (v.getId()) {
             case R.id.iv_back:
             case R.id.tv_back_title:
-
-
+                finish();
                 break;
 
             case R.id.iv_detail:
@@ -67,7 +67,7 @@ public class AddBankActivity extends BaseActivity implements View.OnClickListene
                 break;
 
             case R.id.tv_next:
-
+                EnterClass.enterGetBankCode(AddBankActivity.this);
                 break;
 
             default:

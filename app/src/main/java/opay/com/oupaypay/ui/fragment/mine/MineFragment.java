@@ -66,7 +66,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.re_mine:
-
+                EnterClass.enterProfile(getContext());
                 break;
             case R.id.re_my_bank:
                 EnterClass.enterMyBankActivity(getContext(), "");

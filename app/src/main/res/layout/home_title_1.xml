@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/home_title2_colot"
-   >
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/home_title2_colot"
+              android:orientation="horizontal"
+    >
 
     <RelativeLayout
+        android:id="@+id/re_my_code"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1">
@@ -21,7 +22,7 @@
                 android:layout_width="46dp"
                 android:layout_height="46dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@mipmap/home_scanning" />
+                android:src="@mipmap/home_scanning"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -30,13 +31,14 @@
                 android:layout_marginTop="6dp"
                 android:text="@string/home_scan"
                 android:textColor="@color/white"
-                android:textSize="14sp" />
+                android:textSize="14sp"/>
 
         </LinearLayout>
 
     </RelativeLayout>
 
     <RelativeLayout
+       android:id="@+id/re_my_pay"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1">
@@ -51,7 +53,7 @@
                 android:layout_width="46dp"
                 android:layout_height="46dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@mipmap/home_payment" />
+                android:src="@mipmap/home_payment"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -60,13 +62,14 @@
                 android:layout_marginTop="6dp"
                 android:text="@string/home_pay"
                 android:textColor="@color/white"
-                android:textSize="14sp" />
+                android:textSize="14sp"/>
 
         </LinearLayout>
 
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/re_my_collect"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1">
@@ -81,7 +84,7 @@
                 android:layout_width="46dp"
                 android:layout_height="46dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@mipmap/home_receivables" />
+                android:src="@mipmap/home_receivables"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -90,13 +93,14 @@
                 android:layout_marginTop="6dp"
                 android:text="@string/home_receive"
                 android:textColor="@color/white"
-                android:textSize="14sp" />
+                android:textSize="14sp"/>
 
         </LinearLayout>
 
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/re_my_bank"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1">
@@ -111,7 +115,7 @@
                 android:layout_width="46dp"
                 android:layout_height="46dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@mipmap/home_bankcard" />
+                android:src="@mipmap/home_bankcard"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -120,7 +124,7 @@
                 android:layout_marginTop="6dp"
                 android:text="@string/home_bankcard"
                 android:textColor="@color/white"
-                android:textSize="14sp" />
+                android:textSize="14sp"/>
 
         </LinearLayout>
 

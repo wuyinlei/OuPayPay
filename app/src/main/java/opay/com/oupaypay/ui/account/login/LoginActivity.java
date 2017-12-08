@@ -1,11 +1,13 @@
 package opay.com.oupaypay.ui.account.login;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import opay.com.oupaypay.R;
 import opay.com.oupaypay.app.base.BaseActivity;
+import opay.com.oupaypay.utils.EnterClass;
 
 /**
  * Created by wuyinlei on 2017/12/4.
@@ -48,15 +50,16 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.tv_login:
-
+                EnterClass.enterMain(LoginActivity.this);
                 break;
 
             case R.id.tv_register:
-
+                EnterClass.enterRegister(LoginActivity.this);
+                finish();
                 break;
 
             case R.id.tv_forget_pass:
-
+                EnterClass.enterForgetPass(LoginActivity.this);
                 break;
 
             default:

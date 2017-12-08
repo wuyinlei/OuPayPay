@@ -48,7 +48,7 @@ public class MyAssetsActivity extends BaseActivity implements View.OnClickListen
     @Override
     protected void initView() {
         mIvBack = (ImageView) findViewById(R.id.iv_back);
-        mIvBack = (ImageView) findViewById(R.id.iv_back);
+        mTvBack = (TextView) findViewById(R.id.tv_back_title);
         mIvProfile = (ImageView) findViewById(R.id.iv_profile);
         mTvRealName = (TextView) findViewById(R.id.tv_nickname);
         mTvAllAccount = (TextView) findViewById(R.id.tv_all_account);

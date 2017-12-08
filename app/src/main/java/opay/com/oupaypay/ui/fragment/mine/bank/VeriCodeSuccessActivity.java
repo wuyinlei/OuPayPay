@@ -34,7 +34,7 @@ public class VeriCodeSuccessActivity extends BaseActivity implements View.OnClic
     @Override
     protected void initView() {
         mIvBack = (ImageView) findViewById(R.id.iv_back);
-        mIvBack = (ImageView) findViewById(R.id.iv_back);
+        mTvBack = (TextView) findViewById(R.id.tv_back_title);
         mTvSuccess = (TextView) findViewById(R.id.tv_success);
     }
 
@@ -54,7 +54,8 @@ public class VeriCodeSuccessActivity extends BaseActivity implements View.OnClic
                 break;
 
             case R.id.tv_success:
-
+                finish();
+                // TODO: 2017/12/8 是不是需要回到添加银行卡的界面进行刷新
                 break;
 
             default:

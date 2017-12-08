@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
@@ -41,7 +42,7 @@ import opay.com.oupaypay.utils.tools.RxQrBarTool;
  * @function 扫描fragment
  */
 
-public class ScannerActivity extends Activity  {
+public class ScannerActivity extends Activity implements View.OnClickListener {
 
 
     private static OnRxScanerListener mScanerListener;//扫描结果监听
@@ -54,8 +55,12 @@ public class ScannerActivity extends Activity  {
     private boolean hasSurface;//是否有预览
     private boolean vibrate = true;//扫描成功后是否震动
     private boolean mFlashing = true;//闪光灯开启状态
-    private LinearLayout mLlScanHelp;//生成二维码 & 条形码 布局
-    private ImageView mIvLight;//闪光灯 按钮
+    //    private LinearLayout mLlScanHelp;//生成二维码 & 条形码 布局
+//    private ImageView mIvLight;//闪光灯 按钮
+    private TextView mTvLight;
+    private TextView tv_blum;
+
+    private TextView tv_back_title;
 //    private RxDialogSure rxDialogSure;//扫描结果显示框
 
     public static void setScanerListener(OnRxScanerListener scanerListener) {
@@ -125,10 +130,26 @@ public class ScannerActivity extends Activity  {
     }
 
     private void initView() {
-        mIvLight = (ImageView) findViewById(R.id.top_mask);
+        mTvLight = (TextView) findViewById(R.id.tv_zhaoming);
+        tv_blum = (TextView) findViewById(R.id.tv_blum);
+        tv_blum.setOnClickListener(this);
         mContainer = (RelativeLayout) findViewById(R.id.capture_containter);
         mCropLayout = (RelativeLayout) findViewById(R.id.capture_crop_layout);
-        mLlScanHelp = (LinearLayout) findViewById(R.id.ll_scan_help);
+
+        tv_back_title = (TextView) findViewById(R.id.tv_back_title);
+        findViewById(R.id.iv_back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        tv_back_title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+//        mLlScanHelp = (LinearLayout) findViewById(R.id.ll_scan_help);
         //请求Camera权限 与 文件读写 权限
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED &&
                 ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
@@ -158,17 +179,6 @@ public class ScannerActivity extends Activity  {
     public void setCropHeight(int cropHeight) {
         this.mCropHeight = cropHeight;
         CameraManager.FRAME_HEIGHT = mCropHeight;
-    }
-
-    public void btn(View view) {
-        int viewId = view.getId();
-        if (viewId == R.id.top_mask) {
-            light();
-        } else if (viewId == R.id.top_back) {
-            finish();
-        } else if (viewId == R.id.top_openpicture) {
-            RxPhotoTool.openLocalImage(this);
-        }
     }
 
     private void light() {
@@ -298,4 +308,15 @@ public class ScannerActivity extends Activity  {
         return handler;
     }
 
+    @Override
+    public void onClick(View v) {
+        int viewId = v.getId();
+        if (viewId == R.id.tv_zhaoming) {
+            light();
+//        } else if (viewId == R.id.top_back) {
+//            finish();
+        } else if (viewId == R.id.tv_blum) {
+            RxPhotoTool.openLocalImage(this);
+        }
+    }
 }

@@ -12,51 +12,66 @@
         android:fitsSystemWindows="true"/>
 
     <RelativeLayout
-        android:id="@+id/rl_title"
+        android:id="@+id/re_title"
         android:layout_width="match_parent"
-        android:layout_height="170dp"
-        android:layout_alignParentTop="true"
-        android:background="@mipmap/scan_mask">
+        android:layout_height="45dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/main_color"
+        >
 
         <ImageView
-            android:id="@+id/top_mask"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerInParent="true"
+            android:id="@+id/iv_back"
+            android:layout_width="9dp"
+            android:layout_height="15dp"
             android:layout_centerVertical="true"
-            android:alpha="0.5"
-            android:onClick="btn"
-            android:src="@drawable/ic_lightbulb_outline_black_24dp"/>
+            android:layout_marginStart="15dp"
+            android:background="@color/black"/>
 
-        <ImageView
-            android:id="@+id/top_openpicture"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentRight="true"
+        <TextView
+            android:id="@+id/tv_back_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginRight="40dp"
-            android:alpha="0.5"
-            android:onClick="btn"
-            android:src="@drawable/ic_camera_alt_black_24dp"/>
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/iv_back"
+            android:text="@string/home"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
 
-        <ImageView
-            android:id="@+id/top_back"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentLeft="true"
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
-            android:alpha="0.5"
-            android:background="@drawable/ic_arrow_back_black_24dp"
-            android:onClick="btn"/>
+            android:text="@string/my_bank"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/tv_blum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/len_12"
+            android:text="@string/my_blum"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            />
+
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/capture_crop_layout"
-        android:layout_width="280dp"
-        android:layout_height="280dp"
-        android:layout_below="@id/rl_title"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_below="@+id/re_title"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="125dp"
         android:background="@mipmap/capture"
         android:contentDescription="@string/app_name">
 
@@ -70,44 +85,14 @@
             android:contentDescription="@string/app_name"/>
     </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/bottom_mask"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_below="@id/capture_crop_layout"
-        android:background="@mipmap/scan_mask"
-        android:contentDescription="@string/app_name"/>
-
-    <ImageView
-        android:id="@+id/left_mask"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottom_mask"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/rl_title"
-        android:layout_toLeftOf="@id/capture_crop_layout"
-        android:background="@mipmap/scan_mask"
-        android:contentDescription="@string/app_name"/>
-
-    <ImageView
-        android:id="@+id/right_mask"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottom_mask"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/rl_title"
-        android:layout_toRightOf="@id/capture_crop_layout"
-        android:background="@mipmap/scan_mask"
-        android:contentDescription="@string/app_name"/>
 
     <TextView
-        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_below="@+id/ll_scan_help"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:text="将二维码图片对准扫描框即可自动扫描"
         android:textColor="@android:color/white"
         android:textSize="15sp"/>
@@ -116,38 +101,26 @@
         android:id="@+id/ll_scan_help"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_below="@id/capture_crop_layout"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-
-        android:onClick="btn"
-        android:weightSum="2">
+        android:layout_marginTop="28dp"
+        android:alpha="0.78"
+        android:background="@color/black"
+        android:weightSum="1">
 
         <TextView
-
-            android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_zhaoming"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:layout_gravity="center"
             android:layout_weight="1"
             android:drawableTop="@mipmap/code_icon"
             android:gravity="center"
             android:padding="10dp"
             android:src="@mipmap/code_icon"
-            android:text="二维码"
-            android:textColor="#DBD5D5"/>
-
-        <TextView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="30dp"
-            android:layout_weight="1"
-            android:drawableTop="@mipmap/linecode_icon"
-            android:gravity="center"
-            android:src="@mipmap/linecode_icon"
-            android:text="条形码"
+            android:text="照明"
             android:textColor="#DBD5D5"/>
     </LinearLayout>
 

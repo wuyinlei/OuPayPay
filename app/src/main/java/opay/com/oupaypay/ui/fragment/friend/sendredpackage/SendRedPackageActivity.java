@@ -19,6 +19,8 @@ import opay.com.oupaypay.app.base.BaseActivity;
 import rx.functions.Action1;
 /**
  * Created by wuyinlei on 2017/11/28.
+ *
+ * @funcition 发红包界面
  */
 
 public class SendRedPackageActivity extends BaseActivity implements View.OnClickListener {

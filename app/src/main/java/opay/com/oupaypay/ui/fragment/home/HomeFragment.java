@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 import opay.com.oupaypay.R;
 import opay.com.oupaypay.app.base.BaseFragment;
+import opay.com.oupaypay.utils.EnterClass;
 
 /**
  * Created by wuyinlei on 2017/11/23.
@@ -24,7 +25,7 @@ import opay.com.oupaypay.app.base.BaseFragment;
  * @funcition 首页
  */
 
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
     private AppBarLayout mAppBarLayout = null;
     private CollapsingToolbarLayout collapsingToolbarLayout;
@@ -64,13 +65,23 @@ public class HomeFragment extends BaseFragment {
 
     private RecyclerView myRecyclerView;
 
+    private RelativeLayout mReMyCode;
+    private RelativeLayout mReMyCollect;
+    private RelativeLayout mReMyPay;
+    private RelativeLayout mReMyBank;
+
 
     private ArrayList<Object> datas;
 
     @Override
     protected void initListener() {
-
+        mReMyCode.setOnClickListener(this);
+        mReMyBank.setOnClickListener(this);
+        mReMyCollect.setOnClickListener(this);
+        mReMyPay.setOnClickListener(this);
+        homeCardView.setOnClickListener(this);
     }
+
 
     @Override
     protected void initData() {
@@ -118,6 +129,10 @@ public class HomeFragment extends BaseFragment {
         //整个新闻+资讯打算做成一个统一的recycleview,以数据改变为分界线。
         //大概为 datas 中数据对象Data为  { news{},info{}} ,=》或者直接合并为,反正数据都差不多 {news{}}
 
+        mReMyCode = (RelativeLayout) rootView.findViewById(R.id.re_my_code);
+        mReMyBank = (RelativeLayout) rootView.findViewById(R.id.re_my_bank);
+        mReMyCollect = (RelativeLayout) rootView.findViewById(R.id.re_my_collect);
+        mReMyPay = (RelativeLayout) rootView.findViewById(R.id.re_my_pay);
 
 
         mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
@@ -172,5 +187,36 @@ public class HomeFragment extends BaseFragment {
     @Override
     public int setLayout() {
         return R.layout.fragment_home;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.re_my_code:
+                EnterClass.enterCode(getContext());
+                break;
+
+            case R.id.re_my_pay:
+                EnterClass.enterPayMoney(getContext());
+                break;
+
+            case R.id.re_my_collect:
+                EnterClass.enterCollectMoney(getContext());
+                break;
+
+            case R.id.re_my_bank:
+                EnterClass.enterMyBankActivity(getContext(),"");
+                break;
+
+            case R.id.home_card_view:
+
+                EnterClass.enterDiscount(getContext());
+                break;
+
+
+            default:
+
+                break;
+        }
     }
 }

@@ -4,9 +4,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import opay.com.oupaypay.R;
 import opay.com.oupaypay.app.base.BaseActivity;
+import opay.com.oupaypay.utils.EnterClass;
 
 /**
  * Created by wuyinlei on 2017/11/26.
@@ -23,6 +25,7 @@ public class VerificationPhoneActivity extends BaseActivity implements View.OnCl
     private EditText mEditCode;
     private TextView mGetCode;
     private TextView mTvNotGetCode;
+    private TextView mTvNext;
 
     @Override
     protected void initData() {
@@ -35,16 +38,19 @@ public class VerificationPhoneActivity extends BaseActivity implements View.OnCl
         mTvBack.setOnClickListener(this);
         mGetCode.setOnClickListener(this);
         mTvNotGetCode.setOnClickListener(this);
+        mTvNext.setOnClickListener(this);
+
     }
 
     @Override
     protected void initView() {
         mIvBack = (ImageView) findViewById(R.id.iv_back);
-        mIvBack = (ImageView) findViewById(R.id.iv_back);
+        mTvBack = (TextView) findViewById(R.id.tv_back_title);
         mTvTip = (TextView) findViewById(R.id.tv_tip);
         mEditCode = (EditText) findViewById(R.id.et_code);
         mGetCode = (TextView) findViewById(R.id.tv_get_code);
         mTvNotGetCode = (TextView) findViewById(R.id.tv_cannot_code);
+        mTvNext = (TextView) findViewById(R.id.tv_next);
     }
 
     @Override
@@ -63,20 +69,18 @@ public class VerificationPhoneActivity extends BaseActivity implements View.OnCl
 
                 break;
 
-            case R.id.iv_detail:
-
-                break;
 
             case R.id.tv_next:
-
+                EnterClass.enterVeriCodeSuccess(VerificationPhoneActivity.this);
+                finish();
                 break;
 
             case R.id.tv_get_code:
-
+                Toast.makeText(this, "获取验证码", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.tv_cannot_code:
-
+                Toast.makeText(this, "收不到验证码", Toast.LENGTH_SHORT).show();
                 break;
 
             default:

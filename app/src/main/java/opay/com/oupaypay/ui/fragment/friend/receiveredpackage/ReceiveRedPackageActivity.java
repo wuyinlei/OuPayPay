@@ -18,6 +18,11 @@ import opay.com.oupaypay.R;
 import opay.com.oupaypay.app.base.BaseActivity;
 import rx.functions.Action1;
 
+/**
+ * 接受红包的界面
+ *
+ * @funcition
+ */
 public class ReceiveRedPackageActivity extends BaseActivity {
     private AppBarLayout receiveRedAppbar;
     private CollapsingToolbarLayout redToolbarLayout;

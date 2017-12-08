@@ -3,11 +3,13 @@ package opay.com.oupaypay.ui.account.update.uppass;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
 import opay.com.oupaypay.R;
 import opay.com.oupaypay.app.base.BaseActivity;
+import opay.com.oupaypay.utils.EnterClass;
 
 /**
  * Created by wuyinlei on 2017/12/4.
@@ -60,18 +62,20 @@ public class UpdatePassActivity extends BaseActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.tv_get_code:
-
+                Toast.makeText(this, "获取验证码", Toast.LENGTH_SHORT).show();
                 break;
 
 
             case R.id.tv_reset_password:
-
+                EnterClass.enterResetPassSucc(UpdatePassActivity.this);
+                finish();
                 break;
 
             case R.id.tv_login:
-
+                EnterClass.enterLogin(UpdatePassActivity.this);
+                finish();
                 break;
 
             default:

@@ -18,7 +18,6 @@ import rx.Observer;
 
 public class AddCookieInterceptor implements Interceptor {
 
-
     @Override
     public Response intercept(Chain chain) throws IOException {
 
@@ -27,6 +26,7 @@ public class AddCookieInterceptor implements Interceptor {
                 .subscribe(new Observer<String>() {
                     @Override
                     public void onCompleted() {
+
 
                     }
 
