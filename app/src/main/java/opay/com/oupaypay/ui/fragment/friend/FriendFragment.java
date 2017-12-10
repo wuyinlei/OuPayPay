@@ -37,8 +37,6 @@ public class FriendFragment extends BaseFragment {
 
     @Override
     protected void onBindView(Bundle savedInstanceState, View rootView) {
-
-
         fragmentFriendRefresh = (SwipeRefreshLayout) rootView.findViewById(R.id.fragment_friend_refresh);
         fragmentFriendRecycleview = (StickyListHeadersListView) rootView.findViewById(R.id.fragment_friend_recycleview);
         friendFragmentAppbar = (AppBarLayout) rootView.findViewById(R.id.friend_fragment_appbar);
