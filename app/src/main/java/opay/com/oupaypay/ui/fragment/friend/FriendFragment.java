@@ -42,7 +42,6 @@ public class FriendFragment extends BaseFragment {
         friendFragmentAppbar = (AppBarLayout) rootView.findViewById(R.id.friend_fragment_appbar);
         friendFragmentTitle = (TextView) rootView.findViewById(R.id.friend_fragment_title);
         friendFragmentSelect = (ImageView) rootView.findViewById(R.id.friend_fragment_select);
-
     }
 
     @Override
