@@ -1,8 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:layout_height="match_parent">
+    android:orientation="vertical">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/fragment_friend_refresh"
+            tl:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+                android:id="@+id/fragment_friend_recycleview"
+                android:layout_width="match_parent"
+                android:divider="#d6d6d6"
+                android:scrollbars="none"
+                android:layout_height="match_parent">
+
+
+            </se.emilsjolander.stickylistheaders.StickyListHeadersListView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/bills_fragment_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_color">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="#30384C"
+                    tools:ignore="UselessParent">
+
+
+                    <TextView
+                        android:id="@+id/bills_fragment_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center"
+                        android:text="@string/title_friend"
+                        android:textColor="@color/white"
+                        android:textSize="17sp" />
+
+                    <ImageView
+                        android:id="@+id/bills_fragment_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"
+                        android:src="@mipmap/currency_addfriend"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
 
 </LinearLayout>

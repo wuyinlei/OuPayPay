@@ -68,7 +68,7 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="8dp"
-            android:src="@color/black"/>
+            android:src="@mipmap/mine_go"/>
 
 
     </RelativeLayout>
@@ -88,7 +88,7 @@
             android:layout_width="@dimen/len_20"
             android:layout_height="@dimen/len_20"
             android:layout_marginStart="15dp"
-            android:src="@color/black"/>
+            android:src="@mipmap/mine_bankcard"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -103,7 +103,7 @@
             android:layout_height="25dp"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="8dp"
-            android:src="@color/black"/>
+            android:src="@mipmap/mine_go"/>
 
     </RelativeLayout>
 
@@ -123,7 +123,7 @@
             android:layout_width="@dimen/len_20"
             android:layout_height="@dimen/len_20"
             android:layout_marginStart="15dp"
-            android:src="@color/black"/>
+            android:src="@mipmap/mine_qrcode"/>
 
         <TextView
             android:textColor="@color/black"
@@ -138,7 +138,7 @@
             android:layout_height="25dp"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="8dp"
-            android:src="@color/black"/>
+            android:src="@mipmap/mine_go"/>
 
     </RelativeLayout>
 
@@ -158,7 +158,7 @@
             android:layout_width="@dimen/len_20"
             android:layout_height="@dimen/len_20"
             android:layout_marginStart="15dp"
-            android:src="@color/black"/>
+            android:src="@mipmap/mine_message"/>
 
         <TextView
             android:textColor="@color/black"
@@ -173,7 +173,7 @@
             android:layout_height="25dp"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="8dp"
-            android:src="@color/black"/>
+            android:src="@mipmap/mine_go"/>
 
     </RelativeLayout>
 
@@ -193,7 +193,7 @@
             android:layout_width="@dimen/len_20"
             android:layout_height="@dimen/len_20"
             android:layout_marginStart="15dp"
-            android:src="@color/black"/>
+            android:src="@mipmap/mine_message"/>
 
         <TextView
             android:textColor="@color/black"
@@ -208,7 +208,7 @@
             android:layout_height="25dp"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="8dp"
-            android:src="@color/black"/>
+            android:src="@mipmap/mine_go"/>
 
     </RelativeLayout>
 
@@ -228,7 +228,7 @@
             android:layout_width="@dimen/len_20"
             android:layout_height="@dimen/len_20"
             android:layout_marginStart="15dp"
-            android:src="@color/black"
+            android:src="@mipmap/mine_service"
             tools:ignore="ContentDescription"/>
 
         <TextView
@@ -244,7 +244,7 @@
             android:layout_height="25dp"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="8dp"
-            android:src="@color/black"/>
+            android:src="@mipmap/mine_go"/>
 
     </RelativeLayout>
 

@@ -47,10 +47,10 @@ public class MainActivity extends BaseActivity {
      * 初始化底部的几个菜单栏
      */
     private void initTab() {
-        Tab home = new Tab(R.string.title_home, R.drawable.ic_dashboard_black_24dp, HomeFragment.class);
-        Tab bills = new Tab(R.string.title_bank, R.drawable.ic_dashboard_black_24dp, BillsFragment.class);
-        Tab friend = new Tab(R.string.title_friend, R.drawable.ic_dashboard_black_24dp, FriendFragment.class);
-        Tab mine = new Tab(R.string.title_mine, R.drawable.ic_dashboard_black_24dp, MineFragment.class);
+        Tab home = new Tab(R.string.title_home, R.mipmap.tebbar_home_nopoint, HomeFragment.class);
+        Tab bills = new Tab(R.string.title_bank, R.mipmap.tebbar_bill_nopoint, BillsFragment.class);
+        Tab friend = new Tab(R.string.title_friend, R.mipmap.tebbar__friend_nopoint, FriendFragment.class);
+        Tab mine = new Tab(R.string.title_mine, R.mipmap.tebbar__mine_nopoint, MineFragment.class);
 
         mTabs.add(home);
         mTabs.add(bills);
