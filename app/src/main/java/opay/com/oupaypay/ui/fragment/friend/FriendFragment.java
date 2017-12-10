@@ -24,6 +24,7 @@ public class FriendFragment extends BaseFragment {
     private AppBarLayout friendFragmentAppbar;
     private TextView friendFragmentTitle;
     private ImageView friendFragmentSelect;
+    private FriendStickyAdapter friendStickyAdapter;
 
     @Override
     protected void initListener() {
